@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Customer Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .call-now {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .call-now:hover {
+            background-color: #0056b3;
+        }
+
+        .call-now:active {
+            background-color: #003f7f;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            display: none;
+            z-index: 1000;
+            width: 90%;
+            max-width: 350px;
+            box-sizing: border-box;
+        }
+
+        .popup p {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .popup a {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup a:hover {
+            background-color: #0056b3;
+        }
+
+        .popup a:active {
+            background-color: #003f7f;
+        }
+
+        .popup .close-btn {
+            display: block;
+            margin-top: 15px;
+            color: #333;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .call-now {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+
+            .popup p {
+                font-size: 0.9rem;
+            }
+
+            .popup a {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        window.onload = function() {
+            setTimeout(showPopup, 5000);
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Facebook_Customer_Service</h1>
+        <p>We're here to help you with any questions or concerns. Contact us today!</p>
+        <a class="call-now" href="tel:+18779064557">Call Now +1(877) 906-4557</a>
+    </div>
+
+    <div id="popup" class="popup">
+        <p>Need help? Call us now!</p>
+        <a href="tel:+18779064557">Call Now +1(877) 906-4557</a>
+        <a class="close-btn" onclick="closePopup()">Close</a>
+    </div>
+</body>
+</html>
